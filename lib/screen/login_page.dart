@@ -4,7 +4,8 @@ import 'package:gh_mobile/components/text_field.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatefulWidget{
-  const LoginPage({super.key});
+  final Function()? onTap;
+  const LoginPage({super.key,required this.onTap});
 
       @override
       State<LoginPage> createState()=> _LoginPageState();
@@ -48,7 +49,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
 
                 MyTextField(
                     controller: emailTextController,
@@ -83,7 +84,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     const SizedBox(width: 4),
                     GestureDetector(
-                      onTap: (){},
+                      onTap: widget.onTap,
                       child: Text("Register", style:
                       GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -16,7 +15,7 @@ class MyButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      padding: const EdgeInsets.all(25),
+      padding: const EdgeInsets.all(15),
       decoration:  BoxDecoration(
           color: Color(0xFF45C142),
         borderRadius: BorderRadius.circular(8),
